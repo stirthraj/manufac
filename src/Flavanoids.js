@@ -14,7 +14,7 @@ export default function Flavanoids(){
      <Mean data={ sortedAr.map((row,ind)=>(row.reduce((pV,cI)=>pV+Number(cI.Flavanoids),0)/row.length).toFixed(3))} type={"Flavanoids"}/>
      <Median data={sortedAr.map((row)=>
       row.length%2===0?
-      ((row[row.length/2].Flavanoids+row[Number(row.length/2+1)].Flavanoids)/2).toFixed(3):(row[Number((row.length+1)/2)].Flavanoids).toFixed(3)
+      ((row[row.length/2-1].Flavanoids+row[Number(row.length/2)].Flavanoids)/2).toFixed(3):(row[Number((row.length-1)/2)].Flavanoids).toFixed(3)
      )}
      type={"Flavanoids"}
      />
